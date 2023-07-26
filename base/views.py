@@ -49,7 +49,7 @@ def signOut(request):
     messages.info(request,"You have logged out successfully")
     return redirect("index")
 
-def UserDashboard(request):
+def userDashboard(request):
     Username=request.user.first_name
     context={'Username':Username}
     return render(request,'base/UserDashboard.html',context)
